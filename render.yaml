@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: flask-blog-api
+    env: python
+    buildCommand: ""
+    startCommand: python run.py
+    envVars:
+      - key: JWT_SECRET_KEY
+        value: supersecret
+      - key: DATABASE_URL
+        value: sqlite:///blog.db
